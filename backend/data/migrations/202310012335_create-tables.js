@@ -26,7 +26,7 @@ function createAnimalTable(knex, tableName) {
   exports.down = function(knex) {
     return Promise.all([
       knex.schema.dropTable('StraightGrains'),
-      knex.schema.dropTable('SHEEPaNDgOAT'),
+      knex.schema.dropTable('SheepAndGoat'),
       knex.schema.dropTable('Poultry'),
       knex.schema.dropTable('Equine'),
       knex.schema.dropTable('Rabbit'),
