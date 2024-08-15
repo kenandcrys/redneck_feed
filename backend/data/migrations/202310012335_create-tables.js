@@ -6,7 +6,7 @@ function createAnimalTable(knex, tableName) {
       table.decimal('pricePerBag');
       table.decimal('pricePer20');
       table.decimal('pricePer40');
-      table.string('catgory');
+      table.string('category');
       table.text('url');
     });
   }
