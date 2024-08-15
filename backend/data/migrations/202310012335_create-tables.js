@@ -6,6 +6,7 @@ function createAnimalTable(knex, tableName) {
       table.decimal('pricePerBag');
       table.decimal('pricePer20');
       table.decimal('pricePer40');
+      table.string('catgory');
       table.text('url');
     });
   }
@@ -24,12 +25,12 @@ function createAnimalTable(knex, tableName) {
   
   exports.down = function(knex) {
     return Promise.all([
-      knex.schema.dropTable('Cattle'),
-      knex.schema.dropTable('Swine'),
-      knex.schema.dropTable('Rabbit'),
-      knex.schema.dropTable('Equine'),
+      knex.schema.dropTable('StraightGrains'),
+      knex.schema.dropTable('SHEEPaNDgOAT'),
       knex.schema.dropTable('Poultry'),
-      knex.schema.dropTable('SheepAndGoat'),
-      knex.schema.dropTable('StraightGrains')
+      knex.schema.dropTable('Equine'),
+      knex.schema.dropTable('Rabbit'),
+      knex.schema.dropTable('Swine'),
+      knex.schema.dropTable('Cattle')
     ]);
   };
